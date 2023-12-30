@@ -2,71 +2,57 @@ import React from 'react';
 import { View, StyleSheet, Text, Image } from 'react-native';
 
 const Splash = () => {
+  return (
+    <View style={styles.container}>
+      <View style={styles.topTextContainer}>
+        <Text style={{ color: 'red' }}>Best Place For The Test</Text>
+        <Text style={{ color: 'gray' }}>Delicius Food</Text>
 
-    return (
-        <View style={styles.container}>
-            <View style={styles.topTextContainer}>
-                <Text style={{ color: 'red', fontSize: 20, fontWeight: '900' }}>
-                    Best Place{' '}
-                    <Text style={{ color: 'black', fontSize: 20, fontWeight: '900' }}>For The Test</Text>
-                </Text>
-                <Image
-                    style={styles.image}
-                    source={require('./src/assets/logo.png')}
-                />
-            </View>
-            <View style={styles.bottomEllipse}>
-               
-            </View>
-        </View>
-    );
+        <Image
+          style={styles.image}
+          source={{ uri: 'https://placekitten.com/200/200' }} 
+          //source={require('./assets/logo.png')} // Replace with the actual path to your image
+        />
+      </View>
+      <View style={styles.bottomEllipse}>
+
+      </View>
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: 'white',
-    },
-    image: {
-        width: 200,
-        height: 200,
-        resizeMode: 'contain',
-        borderRadius: 20,
-        marginTop: 10, 
-    },
-    topTextContainer: {
-        position: 'absolute',
-        top: '20%',
-        left: 0,
-        padding: 20,
-        fontSize: 30,
-        right: 0,
-        alignItems: 'center',
-    },
-    bottomTextContainer: {
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        top: '50%',
-        alignItems: 'center',
-        justifyContent: 'center',
-        fontSize: 20,
-        color: 'white',
-        textAlign: 'center',
-        flexWrap: 'wrap',
-        fontWeight:'900'
-    },
-    bottomEllipse: {
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        width: '100%',
-        height: '45%',
-        backgroundColor: '#050B2B',
-        borderTopLeftRadius: 50,
-        borderTopRightRadius: 50,
-    },
+  container: {
+    flex: 1,
+    backgroundColor: 'white',
+  },
+  image: {
+    width: 200, 
+    padding:20,
+    height: 200,
+    resizeMode: 'contain', 
+    borderRadius:20,
+    marginTop:30
+  },
+  topTextContainer: {
+    position: 'absolute',
+    top: '20%', // Position at the center of the top
+    left: 0,
+    padding:20,
+    fontSize:30,
+    right: 0,
+    alignItems: 'center', // Center the text horizontally
+  },
+  bottomEllipse: {
+    position: 'absolute',
+    bottom: 0,
+    left: 0,
+    width: '100%',
+    height: '40%', // 30% of the screen height
+    backgroundColor: '#050B2B', // Color of the bottom ellipse
+    borderTopLeftRadius: 50,
+    borderTopRightRadius: 50,
+  },
 });
 
 export default Splash;
