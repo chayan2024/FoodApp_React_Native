@@ -17,7 +17,7 @@ const Onboarding = () => {
         setCurrentIndex(index);
         if(index==2){ 
             console.warn("index",index)
-            navigation.navigate('Dashboard');
+            navigation.navigate('Navigation');
         }
     };
 
@@ -57,7 +57,7 @@ const Onboarding = () => {
         </Swiper>
         </View>
         {renderIndicator()}
-         <PrimaryButton onPress={() => navigation.navigate('Dashboard')} title={"Getting Started"} />
+         <PrimaryButton onPress={() => navigation.navigate('Navigation')} title={"Getting Started"} />
     </SafeAreaView >
     )
 }
