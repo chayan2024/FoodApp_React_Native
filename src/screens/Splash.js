@@ -10,8 +10,8 @@ const Splash = () => {
 
         <Image
           style={styles.image}
-          source={{ uri: 'https://placekitten.com/200/200' }} 
-          //source={require('./assets/logo.png')} // Replace with the actual path to your image
+          //source={{ uri: 'https://placekitten.com/200/200' }} 
+          source={require('../assets/onboardImage.png')}
         />
       </View>
       <View style={styles.bottomEllipse}>
