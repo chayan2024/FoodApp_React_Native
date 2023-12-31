@@ -3,6 +3,7 @@ import { View, StyleSheet, Text, Image } from 'react-native';
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import { useEffect } from "react";
 import { useNavigation } from '@react-navigation/native';
+import COLORS from '../utils/colors';
 
 const Splash = () => {
 
@@ -22,12 +23,9 @@ const Splash = () => {
   return (
     <View style={styles.container}>
       <View style={styles.topTextContainer}>
-        <Text style={{ color: 'red' }}>Best Place For The Test</Text>
-        <Text style={{ color: 'gray' }}>Delicius Food</Text>
-
+        <Text style={{ color: COLORS.black ,fontWeight:'600',fontSize:22}}>FOOD HUB</Text>
         <Image
           style={styles.image}
-          //source={{ uri: 'https://placekitten.com/200/200' }} 
           source={require('../assets/healthy-food.png')}
         />
       </View>

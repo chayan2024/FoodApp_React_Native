@@ -5,6 +5,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { useState } from "react";
 import Swiper from 'react-native-swiper';
 import { useNavigation } from "@react-navigation/native";
+import PrimaryButton from "../component/Button";
 
 const Onboarding = () => {
 
@@ -32,32 +33,34 @@ const Onboarding = () => {
     };
 
     return (<SafeAreaView style={OnboardingStyle.container}>
-
+         <View style={{height: 700}}>
         <Swiper
             loop={false}
             showsPagination={false}
             onIndexChanged={handleSwiperIndexChanged}
         >
             <View style={OnboardingStyle.slide}>
-                <Image style={{ width: '100%', resizeMode: 'contain', top: 50 }} source={require('../assets/healthy-food.png')}></Image>
-                <Text style={{ fontSize: 26, fontWeight: "bold", textAlign: 'center', top: 60, color: COLORS.black }}>Welcome to Food Lover App</Text>
+                <Image style={{ width: '100%', resizeMode: 'contain', top: 50 }} source={require('../assets/a.png')}></Image>
+                <Text style={{ fontSize: 16, fontWeight: "bold", textAlign: 'center', top: 60, color: COLORS.black }}>Browse your Menu and Order Directly</Text>
             </View>
 
             <View style={OnboardingStyle.slide}>
-                <Image style={{ width: '100%', resizeMode: 'contain', top: 50 }} source={require('../assets/pizza.png')}></Image>
-                <Text style={{ fontSize: 26, fontWeight: "bold", textAlign: 'center', top: 60, color: COLORS.black }}>Explore Exciting Food</Text>
+                <Image style={{ width: '100%', resizeMode: 'contain', top: 50 }} source={require('../assets/b.png')}></Image>
+                <Text style={{ fontSize: 16, fontWeight: "bold", textAlign: 'center', top: 60, color: COLORS.black }}>Even To Space with Us! Together</Text>
             </View>
 
             <View style={OnboardingStyle.slide}>
-                <Image style={{ width: '100%', resizeMode: 'contain', top: 50 }} source={require('../assets/noodles.png')}></Image>
-                <Text style={{ fontSize: 26, fontWeight: "bold", textAlign: 'center', top: 60, color: COLORS.black }}>Get Started Now</Text>
+                <Image style={{ width: '100%', resizeMode: 'contain', top: 50 }} source={require('../assets/c.png')}></Image>
+                <Text style={{ fontSize: 16, fontWeight: "bold", textAlign: 'center', top: 60, color: COLORS.black }}>Pick Up Delivery At your Door</Text>
             </View>
 
         </Swiper>
+        </View>
         {renderIndicator()}
-    </SafeAreaView >)
+         <PrimaryButton onPress={() => navigation.navigate('Dashboard')} title={"Getting Started"} />
+    </SafeAreaView >
+    )
 }
-
 
 export default Onboarding;
 
@@ -84,7 +87,7 @@ const OnboardingStyle = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         position: 'absolute',
-        bottom: 20,
+        bottom: 100,
         left: 0,
         right: 0,
     },

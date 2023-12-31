@@ -14,6 +14,6 @@ export default Cart;
 const dashboardStyle = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor:COLORS.white
+        backgroundColor:COLORS.red
     }
 });
