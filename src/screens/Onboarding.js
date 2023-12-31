@@ -33,7 +33,7 @@ const Onboarding = () => {
     };
 
     return (<SafeAreaView style={OnboardingStyle.container}>
-         <View style={{height: 700}}>
+        <View style={OnboardingStyle.slide}>
         <Swiper
             loop={false}
             showsPagination={false}
