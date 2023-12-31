@@ -1,7 +1,24 @@
 import React from 'react';
 import { View, StyleSheet, Text, Image } from 'react-native';
+import { Colors } from "react-native/Libraries/NewAppScreen";
+import { useEffect } from "react";
+import { useNavigation } from '@react-navigation/native';
 
 const Splash = () => {
+
+  const navigation = useNavigation();
+  
+  useEffect(()=>{
+
+    const fetchData=async()=>{
+
+        setTimeout(() => {
+          navigation.navigate('OnBoarding');
+        }, 2000);
+    }
+    fetchData();
+},[]);
+
   return (
     <View style={styles.container}>
       <View style={styles.topTextContainer}>
