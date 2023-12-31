@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, StyleSheet, Text, Image } from 'react-native';
-import { Colors } from "react-native/Libraries/NewAppScreen";
 import { useEffect } from "react";
 import { useNavigation } from '@react-navigation/native';
 import COLORS from '../utils/colors';
@@ -15,7 +14,7 @@ const Splash = () => {
 
         setTimeout(() => {
           navigation.navigate('OnBoarding');
-        }, 2000);
+        }, 200);
     }
     fetchData();
 },[]);

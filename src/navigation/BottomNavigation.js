@@ -8,8 +8,9 @@ import Search from '../screens/Search';
 const Tab = createBottomTabNavigator();
 
 const BottomNavigation=() =>{
+
   return (
-    <Tab.Navigator>
+    <Tab.Navigator >
       <Tab.Screen name="Home" component={Dashboard} />
       <Tab.Screen name="Favourite" component={Favourite} />
       <Tab.Screen name="Search" component={Search} />
@@ -17,6 +18,7 @@ const BottomNavigation=() =>{
       <Tab.Screen name="Profile" component={Profile} />
     </Tab.Navigator>
   );
+
 }
 
 export default BottomNavigation;
