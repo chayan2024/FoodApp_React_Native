@@ -31,6 +31,7 @@ const BottomNavigator = () => {
               style={{ tintColor: color, width: 28, height: 28 }}
             />
           ),
+        headerShown: false,
         }}
       />
       <Tab.Screen
@@ -42,7 +43,7 @@ const BottomNavigator = () => {
               source={require('../assets/portfolio.png')}
               style={{ tintColor: color, width: 28, height: 28 }}
             />
-          ),
+          ), headerShown: false,
         }}
       />
       <Tab.Screen
@@ -68,7 +69,7 @@ const BottomNavigator = () => {
                 style={{ tintColor: COLORS.primary, width: 28, height: 28 }}
               />
             </View>
-          ),
+          ), headerShown: false,
         }}
       />
       <Tab.Screen
@@ -80,7 +81,7 @@ const BottomNavigator = () => {
               source={require('../assets/active.png')}
               style={{ tintColor: color, width: 28, height: 28 }}
             />
-          ),
+          ), headerShown: false,
         }}
       />
       <Tab.Screen
@@ -92,7 +93,7 @@ const BottomNavigator = () => {
               source={require('../assets/more.png')}
               style={{ tintColor: color, width: 28, height: 28 }}
             />
-          ),
+          ), headerShown: false,
         }}
       />
     </Tab.Navigator>
