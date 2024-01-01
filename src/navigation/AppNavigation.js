@@ -1,10 +1,10 @@
 import React from 'react';
-import Splash from '../screens/Splash';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Onboarding from '../screens/Onboarding';
 import BottomNavigation from './BottomNavigation';
 import Payment from '../screens/Payment';
+import SplashScreen from '../screens/SplashScreen';
+import OnboardingScreen from '../screens/OnboardingScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,8 +16,8 @@ const AppNavigation = () => {
           headerShown: false,
         }}>
           
-            <Stack.Screen name="Splash" component={Splash} />
-            <Stack.Screen name="OnBoarding" component={Onboarding} />
+            <Stack.Screen name="Splash" component={SplashScreen} />
+            <Stack.Screen name="OnBoarding" component={OnboardingScreen} />
             <Stack.Screen name="Navigation" component={BottomNavigation} />
             <Stack.Screen name="Payment" component={Payment} />
 

@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useNavigation } from '@react-navigation/native';
 import COLORS from '../utils/colors';
 
-const Splash = () => {
+const SplashScreen = () => {
 
   const navigation = useNavigation();
   
@@ -69,4 +69,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Splash;
+export default SplashScreen;

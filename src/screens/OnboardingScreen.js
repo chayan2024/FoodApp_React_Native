@@ -7,7 +7,7 @@ import Swiper from 'react-native-swiper';
 import { useNavigation } from "@react-navigation/native";
 import PrimaryButton from "../component/Button";
 
-const Onboarding = () => {
+const OnboardingScreen = () => {
 
     const navigation = useNavigation();
 
@@ -62,7 +62,7 @@ const Onboarding = () => {
     )
 }
 
-export default Onboarding;
+export default OnboardingScreen;
 
 const OnboardingStyle = StyleSheet.create({
     container: {

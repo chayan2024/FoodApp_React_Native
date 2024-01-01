@@ -2,17 +2,26 @@ import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { View, Image } from 'react-native';
 import COLORS from '../utils/colors';
-import Dashboard from '../screens/Dashboard';
-import Search from '../screens/Search';
-import Favourite from '../screens/Favourite';
-import Cart from '../screens/Cart';
+import DashboardScreen from '../screens/DashboardScreen';
+import SearchScreen from '../screens/SearchScreen';
+import FavouriteScreen from '../screens/FavouriteScreen';
+import CartScreen from '../screens/CartScreen';
+import CheckoutScreen from '../screens/CheckoutScreen';
 
 const Tab = createBottomTabNavigator();
 
 const BottomNavigator = () => {
   return (
     <Tab.Navigator
-      tabBarOptions={{
+      screenOptions={{
+        tabBarActiveTintColor: "#F9813A",
+        tabBarShowLabel: false,
+        tabBarStyle: [
+          {
+            display: "flex"
+          },
+          null
+        ],
         style: {
           height: 55,
           borderTopWidth: 0,
@@ -20,10 +29,11 @@ const BottomNavigator = () => {
         },
         showLabel: false,
         activeTintColor: COLORS.primary,
-      }}>
+      }}
+    >
       <Tab.Screen
         name="HomeScreen"
-        component={Dashboard}
+        component={DashboardScreen}
         options={{
           tabBarIcon: ({ color }) => (
             <Image
@@ -31,24 +41,27 @@ const BottomNavigator = () => {
               style={{ tintColor: color, width: 28, height: 28 }}
             />
           ),
-        headerShown: false,
+          headerShown: false,
         }}
       />
-      <Tab.Screen
-        name="LocalMall"
-        component={Search}
+
+       <Tab.Screen
+        name="Checkout"
+        component={CheckoutScreen}
         options={{
           tabBarIcon: ({ color }) => (
             <Image
-              source={require('../assets/portfolio.png')}
+              source={require('../assets/more.png')}
               style={{ tintColor: color, width: 28, height: 28 }}
             />
-          ), headerShown: false,
+          ),
+          headerShown: false,
         }}
       />
+
       <Tab.Screen
         name="Search"
-        component={Search}
+        component={SearchScreen}
         options={{
           tabBarIcon: ({ color }) => (
             <View
@@ -69,31 +82,34 @@ const BottomNavigator = () => {
                 style={{ tintColor: COLORS.primary, width: 28, height: 28 }}
               />
             </View>
-          ), headerShown: false,
+          ),
+          headerShown: false,
         }}
       />
       <Tab.Screen
         name="Favorite"
-        component={Favourite}
+        component={FavouriteScreen}
         options={{
           tabBarIcon: ({ color }) => (
             <Image
               source={require('../assets/active.png')}
               style={{ tintColor: color, width: 28, height: 28 }}
             />
-          ), headerShown: false,
+          ),
+          headerShown: false,
         }}
       />
       <Tab.Screen
         name="Cart"
-        component={Cart}
+        component={CartScreen}
         options={{
           tabBarIcon: ({ color }) => (
             <Image
               source={require('../assets/more.png')}
               style={{ tintColor: color, width: 28, height: 28 }}
             />
-          ), headerShown: false,
+          ),
+          headerShown: false,
         }}
       />
     </Tab.Navigator>
